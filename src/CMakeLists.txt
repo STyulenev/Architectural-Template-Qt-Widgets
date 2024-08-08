@@ -6,4 +6,6 @@ project(Source
     LANGUAGES CXX
 )
 
+add_subdirectory(page)
 add_subdirectory(view)
+# ...

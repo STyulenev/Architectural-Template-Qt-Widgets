@@ -8,16 +8,19 @@ QT_END_NAMESPACE
 
 namespace ATQW::Views {
 
+class Navigator;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
     explicit MainWindow(QWidget* parent = nullptr);
-    ~MainWindow();
+    virtual ~MainWindow();
 
 private:
     Ui::MainWindow* ui;
+    std::shared_ptr<Navigator> m_navigator;
 
 };
 
