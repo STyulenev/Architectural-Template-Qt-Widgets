@@ -1,12 +1,12 @@
+#include "Application.h"
 #include "MainWindow.h"
 #include "SplashScreen.h"
 
-#include <QApplication>
 #include <QThread>
 
 auto main(int argc, char* argv[]) -> int
 {
-    QApplication app(argc, argv);
+    ATQW::Core::Application app(argc, argv);
     ATQW::Views::MainWindow mainWindow;
 
     ATQW::Views::SplashScreen splashScreen;
@@ -14,6 +14,7 @@ auto main(int argc, char* argv[]) -> int
     app.processEvents();
     {
         // some actions
+		app.launch();
         QThread::sleep(5);
     }
     splashScreen.finish(&mainWindow);
