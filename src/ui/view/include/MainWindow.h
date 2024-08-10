@@ -1,10 +1,16 @@
 #pragma once
 
+#include <QCloseEvent>
 #include <QMainWindow>
+#include <QSystemTrayIcon>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui {
+    class MainWindow;
+}
 QT_END_NAMESPACE
+
+class QCloseEvent;
 
 namespace ATQW::Pages {
     class Navigator;
@@ -20,9 +26,17 @@ public:
     explicit MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
 
+protected:
+    auto closeEvent(QCloseEvent* event) -> void;
+
+private slots:
+    auto iconActivated(QSystemTrayIcon::ActivationReason reason) -> void;
+
 private:
     Ui::MainWindow* ui;
     std::shared_ptr<ATQW::Pages::Navigator> m_navigator;
+    QSystemTrayIcon* m_systemTray;
+    bool exit = false;
 
 };
 

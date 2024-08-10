@@ -35,7 +35,7 @@ auto MainMenuPage::on_settingPageButton_clicked() -> void
 
 auto MainMenuPage::on_closeButton_clicked() -> void
 {
-    exit(0);
+    emit exit(0);
 }
 
 } // namespace ATQW::Pages

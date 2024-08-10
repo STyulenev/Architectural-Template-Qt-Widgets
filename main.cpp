@@ -15,7 +15,7 @@ auto main(int argc, char* argv[]) -> int
     {
         // some actions
 		app.launch();
-        QThread::sleep(5);
+        QThread::sleep(3);
     }
     splashScreen.finish(&mainWindow);
 
