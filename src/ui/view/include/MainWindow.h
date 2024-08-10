@@ -6,9 +6,11 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-namespace ATQW::Views {
+namespace ATQW::Pages {
+    class Navigator;
+}
 
-class Navigator;
+namespace ATQW::Views {
 
 class MainWindow : public QMainWindow
 {
@@ -16,11 +18,11 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget* parent = nullptr);
-    virtual ~MainWindow();
+    ~MainWindow();
 
 private:
     Ui::MainWindow* ui;
-    std::shared_ptr<Navigator> m_navigator;
+    std::shared_ptr<ATQW::Pages::Navigator> m_navigator;
 
 };
 

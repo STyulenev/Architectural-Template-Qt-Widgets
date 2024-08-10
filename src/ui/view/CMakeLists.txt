@@ -28,6 +28,7 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
     Qt${QT_VERSION_MAJOR}::Widgets
 
     ATQW::Page-lib
+    ATQW::Setting-lib
 )
 
 set_target_properties(${PROJECT_NAME}

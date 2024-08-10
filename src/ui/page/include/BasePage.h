@@ -2,17 +2,13 @@
 
 #include "PagePrecompile.h"
 
-namespace ATQW::Views {
-    class Navigator;
-}
-
 namespace ATQW::Pages {
 
 class BasePage : public QWidget
 {
     Q_OBJECT
 
-    friend class ATQW::Views::Navigator;
+    friend class Navigator;
 
 public:
     explicit BasePage(QWidget* parent = nullptr);

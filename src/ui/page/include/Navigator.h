@@ -5,16 +5,16 @@
 #include <QStack>
 #include <QStackedWidget>
 
-namespace ATQW::Views {
+namespace ATQW::Pages {
 
 class Navigator : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit Navigator() = delete;
+    Navigator() = delete;
     explicit Navigator(QStackedWidget* container, Pages::BasePage* startPage);
-    virtual ~Navigator() = default;
+    ~Navigator() = default;
 
 private:
     auto connectPage(Pages::BasePage* page) -> void;
@@ -34,4 +34,4 @@ private:
 
 };
 
-} // namespace ATQW::Views
+} // namespace ATQW::Pages

@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(Source
+project(UI
     VERSION 0.1
-    DESCRIPTION "Source"
+    DESCRIPTION "UI"
     LANGUAGES CXX
 )
 

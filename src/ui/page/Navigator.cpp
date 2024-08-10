@@ -1,6 +1,6 @@
 #include "Navigator.h"
 
-namespace ATQW::Views {
+namespace ATQW::Pages {
 
 Navigator::Navigator(QStackedWidget* container, Pages::BasePage* startPage) :
     m_container(container)
@@ -100,4 +100,4 @@ auto Navigator::disconnectPage(Pages::BasePage* page) -> void
     disconnect(page, &Pages::BasePage::next, this, &Navigator::next);
 }
 
-} // namespace ATQW::Views
+} // namespace ATQW::Pages

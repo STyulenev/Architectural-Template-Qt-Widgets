@@ -5,6 +5,7 @@ namespace ATQW::Core {
 Application::Application(int& argc, char** argv) :
     QApplication(argc, argv)
 {
+    setApplicationName("Architectural-Template-Qt-Widgets");
     setOrganizationName("Organization");
     setOrganizationDomain("organization.com");
 }
