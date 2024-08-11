@@ -49,7 +49,7 @@ MainWindow::MainWindow(QWidget* parent) :
     restoreState(state.second);
 
     // Навигатор
-    m_navigator = std::make_shared<ATQW::Pages::Navigator>(ui->stackedWidget, ATQW::Pages::getPage(ATQW::Pages::PageName::AUTHENTICATION_PAGE));
+    m_navigator = new ATQW::Navigation::Navigator(ui->stackedWidget, ATQW::Pages::getPage(ATQW::Pages::PageName::AUTHENTICATION_PAGE), this);
 
     // Время/дата
     QTimer* timer = new QTimer(this);

@@ -1,12 +1,12 @@
 #include "Navigator.h"
 
-namespace ATQW::Pages {
+namespace ATQW::Navigation {
 
-Navigator::Navigator(QStackedWidget* container, Pages::BasePage* startPage) :
-    m_container(container)
+Navigator::Navigator(QStackedWidget* container, Pages::BasePage* startPage, QObject* parent) :
+    AbstractNavigator(container, parent)
 {
     connectPage(startPage);
-    this->m_stackWidgets.append(startPage);
+    AbstractNavigator::m_stackWidgets.append(startPage);
     m_container->addWidget(m_stackWidgets.last());
     m_container->setCurrentIndex(0);
 }
@@ -82,22 +82,22 @@ auto Navigator::replace(Pages::BasePage* page) -> void
 
 auto Navigator::connectPage(Pages::BasePage* page) -> void
 {
-    connect(page, qOverload<>(&Pages::BasePage::back), this, qOverload<>(&Navigator::back));
-    connect(page, qOverload<QVariant>(&Pages::BasePage::back), this, qOverload<QVariant>(&Navigator::back));
-    connect(page, &Pages::BasePage::backTo, this, &Navigator::backTo);
-    connect(page, &Pages::BasePage::backToAndNext, this, &Navigator::backToAndNext);
-    connect(page, &Pages::BasePage::replace, this, &Navigator::replace);
-    connect(page, &Pages::BasePage::next, this, &Navigator::next);
+    connect(page, qOverload<>(&ATQW::Pages::BasePage::back), this, qOverload<>(&Navigator::back));
+    connect(page, qOverload<QVariant>(&ATQW::Pages::BasePage::back), this, qOverload<QVariant>(&Navigator::back));
+    connect(page, &ATQW::Pages::BasePage::backTo, this, &Navigator::backTo);
+    connect(page, &ATQW::Pages::BasePage::backToAndNext, this, &Navigator::backToAndNext);
+    connect(page, &ATQW::Pages::BasePage::replace, this, &Navigator::replace);
+    connect(page, &ATQW::Pages::BasePage::next, this, &Navigator::next);
 }
 
 auto Navigator::disconnectPage(Pages::BasePage* page) -> void
 {
-    disconnect(page, qOverload<>(&Pages::BasePage::back), this, qOverload<>(&Navigator::back));
-    disconnect(page, qOverload<QVariant>(&Pages::BasePage::back), this, qOverload<QVariant>(&Navigator::back));
-    disconnect(page, &Pages::BasePage::backTo, this, &Navigator::backTo);
-    disconnect(page, &Pages::BasePage::backToAndNext, this, &Navigator::backToAndNext);
-    disconnect(page, &Pages::BasePage::replace, this, &Navigator::replace);
-    disconnect(page, &Pages::BasePage::next, this, &Navigator::next);
+    disconnect(page, qOverload<>(&ATQW::Pages::BasePage::back), this, qOverload<>(&Navigator::back));
+    disconnect(page, qOverload<QVariant>(&ATQW::Pages::BasePage::back), this, qOverload<QVariant>(&Navigator::back));
+    disconnect(page, &ATQW::Pages::BasePage::backTo, this, &Navigator::backTo);
+    disconnect(page, &ATQW::Pages::BasePage::backToAndNext, this, &Navigator::backToAndNext);
+    disconnect(page, &ATQW::Pages::BasePage::replace, this, &Navigator::replace);
+    disconnect(page, &ATQW::Pages::BasePage::next, this, &Navigator::next);
 }
 
-} // namespace ATQW::Pages
+} // namespace ATQW::Navigation

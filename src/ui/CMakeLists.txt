@@ -6,6 +6,7 @@ project(UI
     LANGUAGES CXX
 )
 
+add_subdirectory(navigation)
 add_subdirectory(page)
 add_subdirectory(view)
 # ...

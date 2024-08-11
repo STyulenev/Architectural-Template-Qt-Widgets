@@ -12,8 +12,8 @@ QT_END_NAMESPACE
 
 class QCloseEvent;
 
-namespace ATQW::Pages {
-    class Navigator;
+namespace ATQW::Navigation {
+    class AbstractNavigator;
 }
 
 namespace ATQW::Views {
@@ -34,7 +34,7 @@ private slots:
 
 private:
     Ui::MainWindow* ui;
-    std::shared_ptr<ATQW::Pages::Navigator> m_navigator;
+    ATQW::Navigation::AbstractNavigator* m_navigator;
     QSystemTrayIcon* m_systemTray;
     bool exit = false;
 
