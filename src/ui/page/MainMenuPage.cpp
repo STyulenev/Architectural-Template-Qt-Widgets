@@ -25,6 +25,7 @@ auto MainMenuPage::updatePage() -> void
 
 auto MainMenuPage::updatePage(QVariant data) -> void
 {
+    ui->retranslateUi(this);
     qDebug() << data;
 }
 

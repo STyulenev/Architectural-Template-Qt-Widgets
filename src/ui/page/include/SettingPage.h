@@ -2,6 +2,10 @@
 
 #include "BasePage.h"
 
+namespace ATQW::Controllers {
+    class LanguageController;
+}
+
 namespace Ui {
     class SettingPage;
 }
@@ -26,6 +30,7 @@ private slots:
 
 private:
     Ui::SettingPage* ui;
+    Controllers::LanguageController* m_languageController;
 
 };
 

@@ -14,7 +14,7 @@ auto main(int argc, char* argv[]) -> int
     app.processEvents();
     {
         // some actions
-		app.launch();
+        app.launch();
         QThread::sleep(3);
     }
     splashScreen.finish(&mainWindow);

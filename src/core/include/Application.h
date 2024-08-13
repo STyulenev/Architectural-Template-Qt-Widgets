@@ -2,6 +2,10 @@
 
 #include <QApplication>
 
+namespace ATQW::Controllers {
+    class LanguageController;
+}
+
 namespace ATQW::Core {
 
 class Application : public QApplication
@@ -15,6 +19,7 @@ public:
     auto launch() -> void;
 
 private:
+    Controllers::LanguageController* m_languageController;
     // ...
 
 };

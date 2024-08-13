@@ -32,6 +32,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
     Qt${QT_VERSION_MAJOR}::Widgets
+
+    ATQW::Controller-lib
 )
 
 set_target_properties(${PROJECT_NAME}
