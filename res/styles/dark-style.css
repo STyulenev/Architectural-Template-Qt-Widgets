@@ -1,0 +1,51 @@
+/*
+    Стиль для главного виджета QMainWindow
+*/
+QMainWindow
+{
+    background: #111315;
+}
+
+/*
+    Стиль для QWidget
+*/
+QWidget
+{
+    background: #111315;
+}
+
+/*
+    Стили для кнопок QPushButton
+*/
+QPushButton
+{
+    min-height: 40px;
+    min-width: 120px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-radius: 5px;
+    background-color: #7a7676;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*
+    Стили для кнопок QPushButton
+*/
+QLabel
+{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #FFFFFF;
+}
+
+QLabel#greetingLabel
+{
+    font-size: 24px;
+}

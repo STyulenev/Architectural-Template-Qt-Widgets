@@ -4,6 +4,7 @@
 
 #include <QThread>
 
+
 auto main(int argc, char* argv[]) -> int
 {
     ATQW::Core::Application app(argc, argv);
@@ -15,7 +16,7 @@ auto main(int argc, char* argv[]) -> int
     {
         // some actions
         app.launch();
-        QThread::sleep(3);
+        QThread::sleep(1);
     }
     splashScreen.finish(&mainWindow);
 

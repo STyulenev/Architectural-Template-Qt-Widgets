@@ -79,24 +79,25 @@
     <name>SettingPage</name>
     <message>
         <location filename="../../src/ui/page/ui/SettingPage.ui" line="20"/>
-        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="76"/>
+        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="127"/>
         <source>Экран настроек</source>
         <translation>Экран настроек</translation>
     </message>
     <message>
         <location filename="../../src/ui/page/ui/SettingPage.ui" line="68"/>
+        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="128"/>
         <source>Язык:</source>
         <translation>Язык:</translation>
     </message>
     <message>
         <location filename="../../src/ui/page/ui/SettingPage.ui" line="132"/>
-        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="77"/>
+        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="129"/>
         <source>Выйти из профиля</source>
         <translation>Выйти из профиля</translation>
     </message>
     <message>
         <location filename="../../src/ui/page/ui/SettingPage.ui" line="139"/>
-        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="78"/>
+        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="130"/>
         <source>Назад</source>
         <translation>Назад</translation>
     </message>

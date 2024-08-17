@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+
+        <!-- Шрифты -->
+        <file>res/fonts/Helvetica.ttf</file>
+
+        <!-- Иконки -->
+        <!-- <file>res/icons/...</file> -->
+
+        <!-- Картинки -->
+        <!-- <file>res/images/...</file> -->
+
+        <!-- Стили (css/qss) -->
+        <file>res/styles/dark-style.css</file>
+        <file>res/styles/light-style.css</file>
+
+    </qresource>
+</RCC>

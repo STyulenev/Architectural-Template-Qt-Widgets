@@ -19,6 +19,10 @@ public:
     auto launch() -> void;
 
 private:
+    auto setTheme() -> void;
+    auto setFort() -> void;
+
+private:
     Controllers::LanguageController* m_languageController;
     // ...
 

@@ -24,6 +24,7 @@ set(PROJECT_SOURCES
     main.cpp
 
     ${APP_RES}
+    resource.qrc
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

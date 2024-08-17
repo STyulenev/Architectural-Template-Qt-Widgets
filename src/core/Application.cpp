@@ -2,6 +2,10 @@
 
 #include "LanguageController.h"
 
+#include <QFile>
+#include <QStyleFactory>
+#include <QFontDatabase>
+
 namespace ATQW::Core {
 
 Application::Application(int& argc, char** argv) :
@@ -25,8 +29,26 @@ auto Application::launch() -> void
         // ...
     });
 
+    setTheme();
+    setFort();
+
     this->setProperty("LanguageController", QVariant::fromValue<QObject*>(m_languageController));
     // ...
+}
+
+auto Application::setTheme() -> void
+{
+    QFile styleFile(":/res/styles/light-style.css");
+    if (styleFile.open(QIODevice::ReadOnly)) {
+        QString appSlyle = QString(styleFile.readAll());
+        qApp->setStyleSheet(appSlyle);
+        styleFile.close();
+    }
+}
+
+auto Application::setFort() -> void
+{
+    QFontDatabase::addApplicationFont(":/res/fonts/Helvetica.ttf");
 }
 
 } // namespace ATQW::Core
