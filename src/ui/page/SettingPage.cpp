@@ -2,6 +2,7 @@
 #include "ui_SettingPage.h"
 
 #include "LanguageController.h"
+#include "LanguageViewModel.h"
 #include "PageFactory.h"
 
 namespace ATQW::Pages {
@@ -14,8 +15,8 @@ SettingPage::SettingPage(QWidget* parent) :
     setPageName(this->objectName());
 
     m_languageController = qobject_cast<Controllers::LanguageController*>(qApp->property("LanguageController").value<QObject*>());
-
-    //connect(m_languageController, &Controllers::LanguageController::languageChanged, this, &TopPanelViewModel::languageChanged);
+    m_languageViewModel = new ViewModels::LanguageViewModel(this);
+    ui->languageComboBox->setModel(m_languageViewModel);
 }
 
 SettingPage::~SettingPage()
@@ -35,14 +36,19 @@ auto SettingPage::updatePage([[maybe_unused]] QVariant data) -> void
 
 auto SettingPage::on_logoutButton_clicked() -> void
 {
-    m_languageController->setLanguage("en_EN");
-    ui->retranslateUi(this);
-    //emit backTo("AuthenticationPage");
+    emit backTo("AuthenticationPage");
 }
 
 auto SettingPage::on_backButton_clicked() -> void
 {
     emit back(QString("data"));
+}
+
+auto SettingPage::on_languageComboBox_activated(int index) -> void
+{
+    m_languageController->setLanguage(m_languageViewModel->getCodeForIndex(index));
+
+    ui->retranslateUi(this);
 }
 
 } // namespace ATQW::Pages

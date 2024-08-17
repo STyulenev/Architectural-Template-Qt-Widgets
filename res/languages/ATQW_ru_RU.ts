@@ -2,6 +2,19 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru_RU">
 <context>
+    <name>ATQW::ViewModels::LanguageViewModel</name>
+    <message>
+        <location filename="../../src/view-model/LanguageViewModel.cpp" line="16"/>
+        <source>Русский</source>
+        <translation>Русский</translation>
+    </message>
+    <message>
+        <location filename="../../src/view-model/LanguageViewModel.cpp" line="17"/>
+        <source>Английский</source>
+        <translation>Английский</translation>
+    </message>
+</context>
+<context>
     <name>ATQW::Views::SplashScreen</name>
     <message>
         <location filename="../../src/ui/view/SplashScreen.cpp" line="20"/>
@@ -51,7 +64,7 @@
         <location filename="../../src/ui/view/ui/MainWindow.ui" line="14"/>
         <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/view/View-lib_autogen/include/ui_MainWindow.h" line="65"/>
         <source>Architectural-Template-Qt-Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Architectural-Template-Qt-Widgets</translation>
     </message>
 </context>
 <context>
@@ -60,11 +73,6 @@
         <location filename="../../src/ui/view/MainWindow.cpp" line="72"/>
         <source>Приложение свернуто.</source>
         <translation>Приложение свернуто.</translation>
-    </message>
-    <message>
-        <location filename="../../src/ui/page/SettingPage.cpp" line="20"/>
-        <source>Экран настроек</source>
-        <translation>Экран настроек</translation>
     </message>
 </context>
 <context>
@@ -76,13 +84,18 @@
         <translation>Экран настроек</translation>
     </message>
     <message>
-        <location filename="../../src/ui/page/ui/SettingPage.ui" line="45"/>
+        <location filename="../../src/ui/page/ui/SettingPage.ui" line="68"/>
+        <source>Язык:</source>
+        <translation>Язык:</translation>
+    </message>
+    <message>
+        <location filename="../../src/ui/page/ui/SettingPage.ui" line="132"/>
         <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="77"/>
         <source>Выйти из профиля</source>
         <translation>Выйти из профиля</translation>
     </message>
     <message>
-        <location filename="../../src/ui/page/ui/SettingPage.ui" line="52"/>
+        <location filename="../../src/ui/page/ui/SettingPage.ui" line="139"/>
         <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="78"/>
         <source>Назад</source>
         <translation>Назад</translation>

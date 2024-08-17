@@ -6,6 +6,10 @@ namespace ATQW::Controllers {
     class LanguageController;
 }
 
+namespace  ATQW::ViewModels {
+    class LanguageViewModel;
+}
+
 namespace Ui {
     class SettingPage;
 }
@@ -27,10 +31,12 @@ protected:
 private slots:
     auto on_logoutButton_clicked() -> void;
     auto on_backButton_clicked() -> void;
+    auto on_languageComboBox_activated(int index) -> void;
 
 private:
     Ui::SettingPage* ui;
     Controllers::LanguageController* m_languageController;
+    ViewModels::LanguageViewModel*   m_languageViewModel;
 
 };
 
