@@ -1,6 +1,7 @@
 #include <Application.h>
 
 #include "LanguageController.h"
+#include "LoggingController.h"
 #include "ThemeController.h"
 
 #include <QFontDatabase>
@@ -11,6 +12,8 @@ namespace ATQW::Core {
 Application::Application(int& argc, char** argv) :
     QApplication(argc, argv)
 {
+	Controllers::LoggingController::instance()->setDebugMessageHandler();
+	
     setApplicationName("Architectural-Template-Qt-Widgets");
     setOrganizationName("Organization");
     setOrganizationDomain("organization.com");
