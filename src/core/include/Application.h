@@ -4,6 +4,7 @@
 
 namespace ATQW::Controllers {
     class LanguageController;
+    class ThemeController;
 }
 
 namespace ATQW::Core {
@@ -19,11 +20,12 @@ public:
     auto launch() -> void;
 
 private:
-    auto setTheme() -> void;
-    auto setFort() -> void;
+    auto setTheme(const QString& style) -> void;
+    auto setFont() -> void;
 
 private:
     Controllers::LanguageController* m_languageController;
+    Controllers::ThemeController*    m_themeController;
     // ...
 
 };

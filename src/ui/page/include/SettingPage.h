@@ -4,10 +4,12 @@
 
 namespace ATQW::Controllers {
     class LanguageController;
+    class ThemeController;
 }
 
-namespace  ATQW::ViewModels {
+namespace ATQW::ViewModels {
     class LanguageViewModel;
+    class ThemeViewModel;
 }
 
 namespace Ui {
@@ -32,11 +34,14 @@ private slots:
     auto on_logoutButton_clicked() -> void;
     auto on_backButton_clicked() -> void;
     auto on_languageComboBox_activated(int index) -> void;
+    auto on_themeComboBox_activated(int index) -> void;
 
 private:
     Ui::SettingPage* ui;
     Controllers::LanguageController* m_languageController;
+    Controllers::ThemeController*    m_themeController;
     ViewModels::LanguageViewModel*   m_languageViewModel;
+    ViewModels::ThemeViewModel*      m_themeViewModel;
 
 };
 

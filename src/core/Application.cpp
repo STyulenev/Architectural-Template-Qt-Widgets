@@ -1,10 +1,10 @@
 #include <Application.h>
 
 #include "LanguageController.h"
+#include "ThemeController.h"
 
-#include <QFile>
-#include <QStyleFactory>
 #include <QFontDatabase>
+#include <QStyleFactory>
 
 namespace ATQW::Core {
 
@@ -16,6 +16,7 @@ Application::Application(int& argc, char** argv) :
     setOrganizationDomain("organization.com");
 
     m_languageController = new Controllers::LanguageController(this);
+    m_themeController    = new Controllers::ThemeController(this);
 }
 
 Application::~Application()
@@ -29,24 +30,22 @@ auto Application::launch() -> void
         // ...
     });
 
-    setTheme();
-    setFort();
+    connect(m_themeController, &Controllers::ThemeController::themeChanged, this, &Application::setTheme);
+
+    m_themeController->setTheme(2); // light-style
+    setFont();
 
     this->setProperty("LanguageController", QVariant::fromValue<QObject*>(m_languageController));
+    this->setProperty("ThemeController",    QVariant::fromValue<QObject*>(m_themeController));
     // ...
 }
 
-auto Application::setTheme() -> void
+auto Application::setTheme(const QString& style) -> void
 {
-    QFile styleFile(":/res/styles/light-style.css");
-    if (styleFile.open(QIODevice::ReadOnly)) {
-        QString appSlyle = QString(styleFile.readAll());
-        qApp->setStyleSheet(appSlyle);
-        styleFile.close();
-    }
+    qApp->setStyleSheet(style);
 }
 
-auto Application::setFort() -> void
+auto Application::setFont() -> void
 {
     QFontDatabase::addApplicationFont(":/res/fonts/Helvetica.ttf");
 }

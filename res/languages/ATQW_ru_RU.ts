@@ -15,6 +15,19 @@
     </message>
 </context>
 <context>
+    <name>ATQW::ViewModels::ThemeViewModel</name>
+    <message>
+        <location filename="../../src/view-model/ThemeViewModel.cpp" line="15"/>
+        <source>Тёмная</source>
+        <translation>Тёмная</translation>
+    </message>
+    <message>
+        <location filename="../../src/view-model/ThemeViewModel.cpp" line="16"/>
+        <source>Светлая</source>
+        <translation>Светлая</translation>
+    </message>
+</context>
+<context>
     <name>ATQW::Views::SplashScreen</name>
     <message>
         <location filename="../../src/ui/view/SplashScreen.cpp" line="20"/>
@@ -79,25 +92,31 @@
     <name>SettingPage</name>
     <message>
         <location filename="../../src/ui/page/ui/SettingPage.ui" line="20"/>
-        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="127"/>
+        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="142"/>
         <source>Экран настроек</source>
         <translation>Экран настроек</translation>
     </message>
     <message>
         <location filename="../../src/ui/page/ui/SettingPage.ui" line="68"/>
-        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="128"/>
+        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="143"/>
         <source>Язык:</source>
         <translation>Язык:</translation>
     </message>
     <message>
-        <location filename="../../src/ui/page/ui/SettingPage.ui" line="132"/>
-        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="129"/>
+        <location filename="../../src/ui/page/ui/SettingPage.ui" line="91"/>
+        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="144"/>
+        <source>Тема:</source>
+        <translation>Тема:</translation>
+    </message>
+    <message>
+        <location filename="../../src/ui/page/ui/SettingPage.ui" line="155"/>
+        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="145"/>
         <source>Выйти из профиля</source>
         <translation>Выйти из профиля</translation>
     </message>
     <message>
-        <location filename="../../src/ui/page/ui/SettingPage.ui" line="139"/>
-        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="130"/>
+        <location filename="../../src/ui/page/ui/SettingPage.ui" line="162"/>
+        <location filename="../../build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/src/ui/page/Page-lib_autogen/include/ui_SettingPage.h" line="146"/>
         <source>Назад</source>
         <translation>Назад</translation>
     </message>

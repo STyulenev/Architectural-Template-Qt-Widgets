@@ -40,7 +40,7 @@
       </spacer>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <spacer name="horizontalSpacer_2">
          <property name="orientation">
@@ -55,9 +55,9 @@
         </spacer>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_2">
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="languageLabel">
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -69,8 +69,31 @@
            </property>
           </widget>
          </item>
-         <item>
+         <item row="0" column="1">
           <widget class="QComboBox" name="languageComboBox">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="themeLabel">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Тема:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="themeComboBox">
            <property name="minimumSize">
             <size>
              <width>200</width>
