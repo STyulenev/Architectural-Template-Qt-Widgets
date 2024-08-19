@@ -15,9 +15,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Core LinguistTools REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core LinguistTools REQUIRED)
 
+include(cmake/CPackSettings.cmake)
 include(cmake/TranslationUtils.cmake)
 add_app_translations_resource(APP_RES ${QM_FILES})
 
+add_subdirectory(debian)
 add_subdirectory(src)
 
 set(PROJECT_SOURCES
@@ -46,4 +48,10 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 set_target_properties(${PROJECT_NAME}
     PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+)
+
+install(TARGETS ${PROJECT_NAME}
+    DESTINATION "${BINARY_DESTINATION}"
+    PERMISSIONS ${BINARY_PERMISSIONS_DEFAULT}
+    COMPONENT runtime
 )
