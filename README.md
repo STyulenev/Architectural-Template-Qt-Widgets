@@ -11,6 +11,7 @@
 - Мультиязычность;
 - Многотемность;
 - Промежуточное сохранение пользовательских настроек;
+- Пакетирование;
 - Тестируемость.
 
 ## Структура проекта
@@ -90,17 +91,11 @@ linguist
 
 Проект может быть собран из QtCreator или из папки build командами:
 
-### CMake:
-
 ```bash
 cmake ..
 make
 ```
 > Для debug - "cmake -DCMAKE_BUILD_TYPE=Debug ..", для release - "cmake -DCMAKE_BUILD_TYPE=Release .."
-
-### QMake:
-
-В данный момент сборка QMake отсутствует.
 
 ## Сборка с Docker
 
@@ -114,6 +109,29 @@ docker build -t docker-gui -f .\deploy\Dockerfile-Qt-6-5 --build-arg IP_ADDRESS=
 5. Запуск контейнера:
 ```bash
 docker run docker-gui
+```
+## Пакетирование
+
+Примеры команд для версии 0.1 и архитектуры amd64:
+
+Сборка deb пакета:
+```bash
+cpack -G DEB
+```
+
+Проверка lintian
+```bash
+lintian architectural-template-qt-widgets_0.1_amd64.deb
+```
+
+Установка deb пакета:
+```bash
+sudo dpkg --install architectural-template-qt-widgets_0.1_amd64.deb
+```
+
+Удаление deb пакета:
+```bash
+sudo dpkg --remove architectural-template-qt-widgets
 ```
 
 ## Версии
