@@ -26,6 +26,8 @@ SettingPage::SettingPage(QWidget* parent) :
 
     ui->languageComboBox->setModel(m_languageViewModel);
     ui->themeComboBox->setModel(m_themeViewModel);
+
+    ui->themeComboBox->setCurrentIndex(1); // stub
 }
 
 SettingPage::~SettingPage()

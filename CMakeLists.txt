@@ -19,7 +19,10 @@ include(cmake/CPackSettings.cmake)
 include(cmake/TranslationUtils.cmake)
 add_app_translations_resource(APP_RES ${QM_FILES})
 
-add_subdirectory(debian)
+if(LINUX)
+    add_subdirectory(debian)
+endif(LINUX)
+
 add_subdirectory(src)
 
 set(PROJECT_SOURCES
