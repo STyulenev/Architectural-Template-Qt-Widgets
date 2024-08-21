@@ -7,6 +7,8 @@ project(Architectural-Template-Qt-Widgets
     LANGUAGES CXX
 )
 
+option(TEST_OPTION "test opiton" ON)
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 20)
@@ -24,6 +26,10 @@ if(LINUX)
 endif(LINUX)
 
 add_subdirectory(src)
+
+if(TEST_OPTION)
+    add_subdirectory(tests)
+endif(TEST_OPTION)
 
 set(PROJECT_SOURCES
     main.cpp
